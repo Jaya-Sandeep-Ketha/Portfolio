@@ -109,12 +109,16 @@ nav ul li a:hover::after{
 
 .header-text h1{
     font-size: 50px;
-    margin-top: 20px;
+    margin-top: 20px; 
 }
 
 .header-text h1 span{
     color: #ff004f;
 } 
+
+.centered-text{
+    text-align: center;
+}
 
 /* ---------about-------- */
 #about{
@@ -141,7 +145,7 @@ nav ul li a:hover::after{
 }
 
 .sub-title {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     color: #fff;
     padding-bottom: 30px;
@@ -363,7 +367,15 @@ nav ul li a:hover::after{
 .project-layer h3{
     margin-top : 30px;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.project-layer h6{
+    margin-top : 30px;
+    font-weight: bold;
+    font-size: 25px;
     color: black;
     margin-bottom: 50px;
 }
@@ -392,6 +404,12 @@ nav ul li a:hover::after{
     background: #ff004f;
 
 }
+
+/* ---------Achievements-------- */
+.achievements-col{
+    text-align: left;
+}
+
 
 /* --------modal box ----------- */
 
@@ -422,7 +440,7 @@ nav ul li a:hover::after{
     padding: 20px;
     margin-top: 70px;
     border: 1px solid #888;
-    width: 80%;
+    width: 120%;
     border-radius: 50px;
   }
   
