@@ -1,0 +1,902 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family : 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #080808;
+    color: #ffff;
+
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: bold; 
+    padding: 10px 10%;
+    /* background: #262626; */
+    overflow :visible;
+    z-index: 999;
+
+}
+
+/* .navbar{
+    position: sticky;
+    top: 0px;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures spacing is distributed */
+    padding: 20px 10%; /* Increase padding for larger touch targets */
+    background: #262626; /* Dark background for better readability */
+    z-index: 1000; /* Keeps navbar on top */
+    position: fixed; /* Ensures navbar sticks to the top */
+    top: 0;
+    width: 100%; /* Ensures navbar spans the full width */
+    height: 80px; /* Optional: Adjust height as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-size: 36px; /* Base font size for the entire name text */
+    color: #fff;
+    margin-right: 20px; /* Optional: Adjust spacing */
+}
+
+.highlight {
+    font-size: 20px; /* Larger font size specifically for 'Jaya Sandeep' */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrally aligns navbar items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Adjusts spacing between navbar items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px; /* Larger font size for readability */
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff004f; /* Adds a hover effect */
+}
+
+body {
+    padding-top: 200px; /* Add top padding to body to prevent content from hiding under navbar */
+    margin: 0; /* Remove default margin */
+}
+
+/* Common styles for all main sections */
+#header, #about, #skills, #projects, #Research, #Achievements, #contact {
+    padding-top: 30px; /* Greater than the navbar height to ensure visibility */
+    margin-top: -30px; /* Negative margin to offset the padding */
+    scroll-margin-top: 20px; /* Ensures no overlap with the navbar when navigating to the section */
+}
+
+/* Ensure modal content does not go under the navbar */
+.modal-content {
+    padding-top: 100px; /* Extra padding to account for fixed navbar */
+}
+
+.logo {
+    width: 140px;
+
+}
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header-col-1{
+    flex-basis: 50%;
+}
+
+.header-col-2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.header-col-2{
+    flex-basis: 42%; 
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size:30px;
+}
+
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px; 
+}
+
+.header-text h1 span{
+    color: #ff004f;
+} 
+
+.centered-text{
+    text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: none;
+    z-index: 0; /* Set z-index to 0 or lower to make sure content on top is interactable */
+  }
+
+  .header-row, .container {
+    position: relative;
+    z-index: 1; /* Higher than the particle container but lower overall */
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#dynamic-text {
+    border-right: 2px solid #00FFFF; /* Cyan cursor effect */
+    color: #d5d517; /* Cyan text color */
+    padding-right: 5px;
+    animation: blink 0.75s step-end infinite;
+}
+
+/* ---------about-------- */
+#about{
+    padding: 50px 0;
+    color: #ababab;
+}
+/* .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    text-align: justify;
+    /* flex-basis: 60%;   */
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 10px;  /* Reduced padding */
+    margin-bottom: 10px;   /* Reduced margin */
+}
+
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+.tab-links:after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* Skills */
+#skills{
+    padding: 50px 0;
+}
+
+/* .skills-section-for-big-screen .skills-tab-contents .skills-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+} */
+
+.skills-tab-contents {
+    display: none;
+}
+
+.skills-active-tab {
+    display: block;
+}
+
+
+.skills-tab-contents .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 40px;
+    text-align: center;
+}
+
+.skills-tab-contents .skills-list div {
+    padding: 20px;
+    color: #fff; /* Icon color */
+}
+
+.skills-tab-contents .skills-list div i {
+    font-size: 48px; /* Size of the icons */
+    transition: color 0.5s, transform 0.5s;
+}
+
+.skills-tab-contents .skills-list div:hover i {
+    color: #ff004f; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.skills-tab-contents .skills-list div p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ccc; /* Subtle text color */
+}
+
+.skills-tab-titles{
+    display:flex;
+    margin: 0px 0 40px;
+}
+
+.skills-tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+}
+
+.skills-tab-links:after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.skills-tab-links.skills-active-link::after{
+    width: 50%;
+}
+
+.skills-tab-contents{
+    display: none;
+}
+
+.skills-tab-contents.skills-active-tab{
+    display: block;
+}
+
+/* ----------for small screen---------- */
+.skills-tab-contents-for-small-screen{
+    display: block;
+}
+
+.skills-tab-contents-for-small-screen .skills-tab-links{
+    margin-right: 50px;
+    margin-top : 20px;
+    font-size: 20px;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.skills-tab-contents-for-small-screen .skills-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    /* grid-gap: 40px; */
+    /* margin-top: 50px; */
+}
+
+.skills-tab-contents-for-small-screen .skills-list div{
+    background: #262626;
+    /* background: #ff004f; */
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.skills-tab-contents-for-small-screen .skills-list div h2{
+    font-size: 15px;
+    font-weight: 180;
+    text-align: center;
+
+}
+
+.skills-tab-contents-for-small-screen .skills-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ------------projects---------- */
+#projects{
+    padding: 50px 0;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure cards have minimum width of 250px */
+    grid-gap: 40px; /* Space between cards */
+    margin-top: 50px; /* Space above the grid */
+    padding: 0 20px; /* Padding on the sides of the grid container */
+}
+
+
+.project-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.project-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #262626;
+    padding: 40px;
+    /* transition: background 0.5s, transform 0.5s; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: transform 0.5s;
+}
+
+.project-layer h3{
+    margin-top : 30px;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.project-layer h6{
+    margin-top : 30px;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.project-work:hover i{
+    transform: scale(1.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-work:hover .project-layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover{
+    background: #ff004f;
+    background-color: #ff0000;  /* Change to a brighter shade for visibility */
+    transform: scale(1.05);
+
+}
+
+
+/* Research */
+/* ------------projects---------- */
+#research{
+    padding: 50px 0;
+}
+
+.research-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure cards have minimum width of 250px */
+    grid-gap: 40px; /* Space between cards */
+    margin-top: 50px; /* Space above the grid */
+    padding: 0 20px; /* Padding on the sides of the grid container */
+}
+
+.research-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.research-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.research-work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: #262626;
+    padding: 40px;
+    /* transition: background 0.5s, transform 0.5s; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: transform 0.5s;
+}
+
+.research-layer h3{
+    margin-top : 30px;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.research-layer h6{
+    margin-top : 30px;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.research-work:hover i{
+    transform: scale(1.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.research-work:hover .research-layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover{
+    background: #ff004f;
+    background-color: #ff0000;  /* Change to a brighter shade for visibility */
+    transform: scale(1.05);
+
+}
+
+.research-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.research-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Make sure it fits all items side by side appropriately */
+}
+
+.research-work {
+    width: 50%; /* Each item takes up half the width of the viewport */
+    flex-shrink: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center the content inside each card */
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* ---------Achievements-------- */
+.achievements-col{
+    text-align: left;
+}
+
+
+/* --------modal box ----------- */
+
+.myModalBtn {
+    background: none;
+    border:none;
+    cursor: pointer;
+}
+.modal {
+    display:none; 
+    position: fixed; 
+    z-index: 1; 
+    padding: 10% 20% 10% 20%; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color:rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    justify-content: center;
+    animation: fadeIn 0.5s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  
+  /* Modal Content */
+  .modal-content {
+    background-color:white;
+    margin: auto;
+    padding: 20px;
+    margin-top: 70px;
+    border: 1px solid #888;
+    width: 120%;
+    border-radius: 50px;
+  }
+  
+  /* The Close Button */
+  .modalclose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .modalclose:hover,
+  .modalclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* ---------contact---- */
+.row-contact{
+    padding-left : 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+
+.contact-left{
+    flex-basis: 35%;  
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.sm-icons{
+    margin-top: 30px;
+}
+
+.sm-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.sm-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+.mail{
+    padding-top: 50px;
+}
+
+
+.copyright{
+    width:100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* ---------css for small screen--------- */
+nav .fa-solid{
+    display: none;
+}
+
+.skills-section-for-small-screen{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        /* background-image: url(images/user.jpg); */
+        height : 250px;
+    }
+    .header-text{
+        /* margin-top: 100%; */
+        font-size:16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .navbar{
+        position:relative;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top:0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+    }
+
+    .list-collapse{
+    flex-basis: 100%;
+    flex-grow: 1;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 12px;
+        margin-right: 20px;
+        font-weight:700;
+    }
+
+    /* ------------- skills for small screen --------------- */
+
+    .skills-section-for-big-screen{
+        display: none;
+    }
+
+    .skills-section-for-small-screen{
+        display: block;
+    }
+
+    .skills-tab-contents .skills-list {
+        grid-template-columns: repeat(3, 1fr); /* Adjust based on available space */
+    }
+
+    .skills-tab-contents .skills-list div {
+        padding: 15px;
+        font-size: 36px; /* Smaller icons for smaller screens */
+    }
+
+    /* .skills-tab-links{
+     margin-right: 50px; 
+        font-size: 10px;
+        cursor: pointer;
+        position: relative;
+        font-weight: bold;
+    } */
+
+    /* div .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    
+    .class-for-small-screen{
+        background: #ff004f;
+        position: fixed;
+        top:0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    
+    div ul p{
+        display: block;
+        margin: 25px;
+    }
+    
+    div ul .fa-solid{
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+    } */
+
+
+    .modal{
+        padding : 0px;
+    }
+
+    .row-contact{
+    padding-left : 0px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .mail{
+        font-size: 24px;
+    }
+
+
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+
+
+  

@@ -1,0 +1,76 @@
+/* src/About/about.css */
+/* ---------about-------- */
+#about {
+    padding: 0px 0 100px; /* Adjusted bottom padding to ensure enough space */
+    color: #ababab;
+    scroll-margin-top: 40px; /* Ensuring enough space from the navbar */
+    padding-bottom: 300px;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    text-align: justify;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 10px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+.tab-links:after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link:after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}

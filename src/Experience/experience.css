@@ -1,0 +1,187 @@
+/* src/Experience/experience.css */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding-top: 0px; /* No padding at the top */
+    color: #ababab;
+    background-color: #080808; /* Match your theme background */
+    scroll-margin-top: 300px; /* Ensure section aligns correctly when navigated */
+    
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto; /* Center the timeline */
+    width: 80%; /* Adjust the width as needed */
+    padding-top: 20px; /* Add some padding to the top */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 400px; /* Adjust height as needed */
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ff004f; /* Timeline line color */
+    left: 50%;
+    margin-left: -2px;
+    animation: growLine 1s ease-in-out;
+}
+
+.timeline-item {
+    margin-bottom: 20px; /* Space between items */
+    width: calc(50% - 20px); /* Adjust width accounting for padding or borders */
+    position: relative;
+    background: #333; /* Background color for each timeline item */
+    color: #fff; /* Text color */
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); /* Shadow for depth */
+    cursor: pointer;
+}
+
+.timeline-item.left {
+    float: left; /* Align to the left */
+    clear: both; /* Ensures that each item clears the previous float */
+}
+
+.timeline-item.right {
+    float: right; /* Align to the right */
+    clear: both; /* Ensures that each item clears the previous float */
+}
+
+
+.timeline-content {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center align */
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+    margin-right: 15px; /* Space between icon and text */
+    animation: fadeInRotate 1s ease-in-out;
+}
+
+.timeline-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure logo fits within the circle */
+    border-radius: 50%; /* Ensure the logo is circular */
+}
+
+.timeline-text h2 {
+    color: #ff004f; /* Primary theme color for company names */
+}
+
+.timeline-text p {
+    color: #fff; /* White text for details */
+}
+
+.tab-content {
+    display: none;
+    background: #222;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px; /* Ensure there's space below the tab content */
+    color: #fff;
+    animation: fadeIn 0.5s ease-in-out;
+    padding-top: 20px; /* Add more padding to the top if necessary */
+}
+
+.tab-content.active {
+    display: block;
+    scroll-margin-top: 100px; /* Adjust this value to match the height of your fixed header/navigation bar */
+}
+
+.tab-content h3 {
+    color: #ff004f; /* Primary theme color for tab headings */
+}
+
+.tab-content ul {
+    list-style: disc; /* Use bullet points */
+    padding-left: 20px; /* Indent bullet points */
+}
+
+.tab-content li {
+    margin-bottom: 10px; /* Space between list items */
+    color: #fff; /* White text for list items */
+}
+
+.tab-content li a {
+    color: #ff004f; /* Link color matching the theme */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tab-content li a:hover {
+    text-decoration: underline;
+}
+
+.tab-content h3 a {
+    color: #d5d517; /* Link color for the company name */
+    text-decoration: none;
+}
+
+.tab-content h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRotate {
+    from {
+        opacity: 0;
+        transform: rotate(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes growLine {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}

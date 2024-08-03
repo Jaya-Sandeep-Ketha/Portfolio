@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://kit.fontawesome.com/8e56393a54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+        <p class="name"><span style="color: red">J</span>aya <span style="color: red">S</span>andeep</p>
+        <ul>
+            <li><a href="#header" onclick="closeAllTabs()">Home</a></li>
+            <li><a href="#about" onclick="closeAllTabs()">About</a></li>
+            <li><a href="#experience" onclick="closeAllTabs()">Experience</a></li>
+            <li><a href="#skills" onclick="loadSkillsContent()">Skills</a></li>
+            <li><a href="#projects" onclick="closeAllTabs()">Projects</a></li>
+            <li><a href="#Research" onclick="closeAllTabs()">Research</a></li>
+            <li><a href="#Achievements" onclick="closeAllTabs()">Achievements</a></li>
+            <li><a href="#contact" onclick="closeAllTabs()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Placeholder for sections -->
+    <div id="main-content"></div>
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./particle.js"></script>
+    <script src="./loadSections.js"></script>
+    <script src="./src/Experience/experience.js"></script>
+    <script src="./src/Skills/skills.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+#skills {
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding-top: 100px;
+    margin-top: 0px;
+    background-color: #080808; /* Assuming a dark theme background */
+}
+
+.container {
+    margin-top: 0px;
+    padding: 0px 10%;
+    box-sizing: border-box;
+}
+
+.skill-col-2 {
+    text-align: justify;
+}
+
+.sub-title {
+    font-size: 2em;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.skills-tab-titles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skills-tab-links {
+    margin-right: 15px;
+    cursor: pointer;
+    color: #aaa;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.skills-tab-links:hover,
+.skills-tab-contents:target ~ .skills-tab-titles a[href="#"]:target {
+    color: #ffcc00;
+}
+
+.skills-tab-contents {
+    display: none; /* Hide all tab contents by default */
+}
+
+.skills-tab-contents:target {
+    display: block; /* Only display the targeted content */
+}
+
+
+.skills-tab-links:target {
+    color: #ffcc00; /* Highlight color for active tab */
+}
+
+.skills-tab-contents {
+    display: none;
+    scroll-margin-top: 70px; /* Offset the scroll position to prevent the heading from being cut off */
+}
+
+.skills-tab-contents:target {
+    display: block;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around; /* Distribute spacing evenly */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    padding: 20px 0; /* Add padding for better spacing */
+    width: 100%; /* Take full width */
+    margin: 0 auto; /* Center the skills list */
+}
+
+.skills-list div {
+    margin: 10px;
+    text-align: center;
+}
+
+.skills-list i {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/* Style for icons and text alignment */
+.skills-list div.icon {
+    flex: 1 0 18%; /* Grow to fill space, don't shrink, base width of 18% */
+    max-width: 18%; /* Maximum width to prevent overflow */
+    height: 130px; /* Adjusted for better fit */
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+    padding: 10px; /* Add padding for better spacing */
+    cursor: pointer;
+}
+
+.skills-list div.icon::before {
+    content: '';
+    display: block;
+    width: 150px; /* Adjust the icon size as needed */
+    height: 150px; /* Maintain aspect ratio */
+    background-size: contain; /* Ensure the icon fits within the div */
+    background-repeat: no-repeat; /* Prevent repeating of the background image */
+    background-position: center; /* Center the background image */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.skills-list .python-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=hGdCwhSHUe6L&format=png&color=000000');
+    background-repeat: no-repeat; /* Prevent the icon from repeating */
+}
+
+.skills-list .java-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=lTKW3iI3wIT0&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .postgre-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=38561&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .mysql-icon::before {
+    background-image: url('./logos/mysql.png');
+    background-repeat: no-repeat;
+}
+
+
+.skills-list .mongodb-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=74402&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .javascript-icon::before {
+    background-image: url('./logos/javascript.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .typescript-icon::before {
+    background-image: url('./logos/typescript.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .html-icon::before {
+    background-image: url('./logos/html.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .css-icon::before{
+    background-image: url('https://img.icons8.com/?size=100&id=21278&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .sass-icon::before {
+    background-image: url('./logos/sass.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .json-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=114474&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+/* Frameworks */
+.skills-list .react-icon::before {
+    background-image: url('./logos/react.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .angular-icon::before {
+    background-image: url('./logos/angularjs.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .nodejs-icon::before {
+    background-image: url('./logos/nodejs.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .django-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=qV-JzWYl9dzP&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .express-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=WNoJgbzDr3i2&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .bootstrap-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=84710&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jquery-icon::before {
+    background-image: url('./logos/jquery.png');
+    background-repeat: no-repeat;
+}
+
+/* DevOps */
+.skills-list .git-icon::before {
+    background-image: url('./logos/git.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .github-icon::before {
+    background-image: url('./logos/github.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .docker-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .kubernetes-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=cvzmaEA4kC0o&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jenkins-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=39292&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .ansible-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=iGCCE2iEmh2u&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .terraform-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=kEkT1u7zTDk5&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .bash-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=9MJf0ngDwS8z&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .gitops-icon::before {
+    background-image: url('./logos/gitops.png');
+    background-repeat: no-repeat;
+}
+
+/* Cloud */
+.skills-list .aws-icon::before {
+    background-image: url('https://img.icons8.com/?size=100&id=33039&format=png&color=000000');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jquery-icon::before {
+    background-image: url('./logos/jquery.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jquery-icon::before {
+    background-image: url('./logos/jquery.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jquery-icon::before {
+    background-image: url('./logos/jquery.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jquery-icon::before {
+    background-image: url('./logos/jquery.png');
+    background-repeat: no-repeat;
+}
+
+.skills-list .jquery-icon::before {
+    background-image: url('./logos/jquery.png');
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+/* Hidden scrolling list initially */
+
+
+
+#scrolling-list-container {
+    display: none; /* Initially hidden */
+    width: 100%;
+    overflow: hidden; /* Hide overflow to create the continuous scrolling effect */
+    white-space: nowrap;
+    margin-top: 20px;
+    background-color: #080808; /* Match the background of the skills section */
+    padding: 10px 0; /* Add padding for spacing */
+    position: relative;
+}
+
+.scrolling-list {
+    display: inline-block;
+    animation: scroll 40s linear infinite; /* Continuous scrolling animation */
+}
+
+.scrolling-list .icon {
+    display: inline-block;
+    width: 100px; /* Adjusted width */
+    height: 120px; /* Adjusted height */
+    margin-right: 10px; /* Equal spacing between icons */
+    text-align: center;
+    color: #fff; /* White text color */
+}
+
+.scrolling-list .icon p {
+    margin: 0;
+    font-size: 12px; /* Adjust text size as needed */
+}
+
+.scrolling-list div.icon::before {
+    content: '';
+    display: block;
+    width: 80px; /* Adjusted width */
+    height: 80px; /* Adjusted height */
+    background-size: contain; /* Ensure the icon fits within the div */
+    background-repeat: no-repeat; /* Prevent repeating of the background image */
+    background-position: center; /* Center the background image */
+    margin: 0 auto 10px auto; /* Center icon and space between icon and text */
+}
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Ensure the scrolling icons are correctly displayed */
+.scrolling-list .aws-ec2-icon::before {
+    background-image: url('./logos/ec2.png');
+}
+
+.scrolling-list .aws-s3-icon::before {
+    background-image: url('./logos/s3.png');
+    background-repeat: no-repeat;
+}
+
+.scrolling-list .aws-cloudfront-icon::before {
+    background-image: url('./logos/cloudfront.png');
+}
+
+.scrolling-list .aws-cloudwatch-icon::before {
+    background-image: url('./logos/cloudwatch.png');
+}
+
+.scrolling-list .aws-cloudbuild-icon::before {
+    background-image: url('./logos/codebuild.png');
+}
+
+.scrolling-list .aws-cloudcommit-icon:before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-clouddeploy-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-cloudpipeline-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-dynamodb-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-ECR-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-ECS-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-EKS-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-ELB-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-IAM-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-lambda-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-r53-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-RDS-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-SNS-icon::before {
+    background-image: url('./logos/github.png');
+}
+
+.scrolling-list .aws-SQS-icon::before {
+    background-image: url('./logos/github.png');
+}
